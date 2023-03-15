@@ -1,13 +1,24 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+Cfripper
+Regula
+Terrascan
+Chef inspec
 
 ### Example vulnerability
+vulnerability on the configuration that we set for a security group
 
 ##Scan AMI’s or containers for OS vulnerabilities
+Clair, Anchore, Trivy
+aquasec, sysdig, twistlosk
+AWS Inspector
 
 ### Example vulnerability
+Allowing SSH password login
+Vulnerabilities to Django libraries
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
-
+AWS Config
 ### Example vulnerability
+HTTP listeners of Application Load Balancers do not have HTTP to HTTPS redirection configured.
