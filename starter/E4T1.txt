@@ -1,5 +1,8 @@
 
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
-
+    - Since we dont need access to the RecipeWebServiceInstance, we can place the instance private subnet
+    - In addition, we can restrict the access to the AttackInstance so that the hackers cannot use it to attack all other resource in our VPC
+    - Beside that, for the RecipeWebServiceInstance, we can block all access to port 22
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+    - We can use a customer-managed CMK to encryt the data in S3SecretRecipies bucket, and deny the IAM role that attach to the AttackInstance and RecipeWebServiceInstance to use the encrytion key

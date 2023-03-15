@@ -1,8 +1,14 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+    - We can use WAF for ALB to prevent DDOS
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+    - To be honest, I have no idea for this question. But my two cents is that we can leverage the S3 block public access and S3 policy, or either using a customer-managed CMK to protect our bucket
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+    - No, the default encryption just encrypt all object coming since the time we enable it
+    - Notice: At the time I did this project, the defaul encryption for s3 buctket is set to be enabled by default
 
 # What would happen if the original cloud formation templates are applied to this environment.
+    - I made the change through CLI by update the cloud formation templates
+    - If i mid make change by console, the resource would be back the original status after applied the original cloud formation templates
