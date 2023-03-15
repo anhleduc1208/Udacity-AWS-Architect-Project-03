@@ -5,3 +5,4 @@ Currently we use an api key of iam user with fullaccess to s3 to upload object t
 If the api key is stolen, the hacker can use it to do bad things on our s3 buckets
 
 # Poor practice 2
+The RecipeWebServiceInstance is having a role with full access to all of the s3 and also it facing the internet as well, which would lead to a bad situation if the hacker get access to the ec2
